@@ -77,7 +77,7 @@ with DAG(dag_id="project_dag", default_args=default_arguments) as dag:
 
     sending_email1 = EmailOperator(
         task_id='send_email1',
-        to="anas.jouani20@ump.ac.ma",
+        to="email1@aaa.bbb",
         subject="IT department data",
         html_content=body,
         files=['/opt/airflow/dags/data/ITreport.xlsx'],
@@ -85,7 +85,7 @@ with DAG(dag_id="project_dag", default_args=default_arguments) as dag:
 
     sending_email2 = EmailOperator(
         task_id='send_email2',
-        to="anas.jouani20@ump.ac.ma",
+        to="email2@aaa.bbb",
         subject="HR department data",
         html_content=body,
         files=['/opt/airflow/dags/data/HRreport.xlsx'],
